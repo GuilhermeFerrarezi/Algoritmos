@@ -21,7 +21,7 @@ int main() {
              float N2;
              float media;
     };
-    struct estruturaAluno aluno[2];
+    struct estruturaAluno aluno[Tamanho];
     
     int i;
     float media = 0;
