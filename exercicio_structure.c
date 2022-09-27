@@ -10,6 +10,14 @@
     return (md);
 }
 
+float valida_nota(){
+	float i = 99;
+	while (i>10 || i<0){
+		scanf("%f",&i);
+	}
+	return i;
+}
+
 
 int main() {
 	
@@ -31,9 +39,9 @@ int main() {
        printf( "Matrícula do aluno: ");
        scanf ("%d" ,&aluno[i].matricula);
        printf( "Nota N1: ");
-       scanf ("%f", &aluno[i].N1);
+       aluno[i].N1 = valida_nota();
        printf( "Nota N2: ");
-       scanf ("%f", &aluno[i].N2);
+       aluno[i].N2 = valida_nota();
        aluno[i].media = calculamedia(aluno[i].N1,aluno[i].N2);
        media += aluno[i].N1 + aluno[1].N2;
 	}
@@ -41,7 +49,7 @@ int main() {
 	media /= Tamanho;
     
     for (i=0;i<Tamanho;i++){
-        printf( "\nBOLETIM DO ALUNO %d\n",aluno[i].media);
+        printf( "\nBOLETIM DO ALUNO %d\n",aluno[i].matricula);
         printf( "\nNota N1: %.1f", aluno[i].N1);
         printf( "\nNota N2: %.1f", aluno[i].N2);
         if (aluno[i].media >= media){
@@ -56,6 +64,3 @@ int main() {
 	
        return (0);
 }
-
-
-
