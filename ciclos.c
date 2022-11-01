@@ -8,5 +8,6 @@ void ciclo(int n, int limite){
 } 
 
 int main(){
+	setlocale(LC_ALL,"Portuguese");
 	ciclo(2,10);
 }
